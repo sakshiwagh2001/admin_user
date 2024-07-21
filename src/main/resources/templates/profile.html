@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org"
+       th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<section class="text-center">
+<h2>User profile page</h2>
+    <p>Name:  [[${user.name}]]</p>
+    <p>email:  [[${user.email}]]</p>
+    <p>Mobile no:  [[${user.mobileNo}]]</p>
+    <p>Role:  [[${user.role}]]</p>
+
+    <!-- Logout button -->
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Logout" class="btn btn-primary"/>
+    </form>
+</section>
+</body>
+</html>
